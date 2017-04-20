@@ -22,5 +22,35 @@ class ItemCell: UITableViewCell {
         valueLabel.adjustsFontForContentSizeCategory = true
         
     }
+    
+    func config(item: Item) {
+        
+        if let name = item.name as String? {
+            
+            nameLabel.text = name
+        }
+        
+        if let serialNumber = item.serialNumber as String? {
+            
+            serialNumberLabel.text = serialNumber
+        }
+        
+        if let value = item.valueInDollars as Int? {
+            
+            if value > 50 {
+                
+                valueLabel.textColor = UIColor.green
+                
+            } else {
+                
+                valueLabel.textColor = UIColor.red
+            }
+            
+            valueLabel.text = "$\(value)"
+        }
+        
+    }
+    
+    
         
 }

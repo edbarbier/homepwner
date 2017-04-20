@@ -40,10 +40,9 @@ class ItemsViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath) as! ItemCell
         let item = itemStore.allItems[indexPath.row]
-        cell.nameLabel.text = item.name
-        cell.serialNumberLabel.text = item.serialNumber
-        cell.valueLabel.text = "$\(item.valueInDollars)"
         
+        cell.config(item: item)
+                
         return cell
     }
     
