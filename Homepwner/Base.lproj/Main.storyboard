@@ -17,9 +17,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="hfy-I8-XfZ">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bli-Vl-6pY">
+                                    <rect key="frame" x="8" y="15" width="176" height="30"/>
+                                    <state key="normal" title="Edit"/>
+                                    <connections>
+                                        <action selector="toggleEditingMode:" destination="Wcu-R7-K4c" eventType="touchUpInside" id="N7u-9A-1HX"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XMS-3V-fh8">
+                                    <rect key="frame" x="192" y="15" width="175" height="30"/>
+                                    <state key="normal" title="Add"/>
+                                    <connections>
+                                        <action selector="addNewItem:" destination="Wcu-R7-K4c" eventType="touchUpInside" id="Fzv-js-eTf"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="Bli-Vl-6pY" firstAttribute="leading" secondItem="hfy-I8-XfZ" secondAttribute="leading" constant="8" id="2Zl-84-rNE"/>
+                                <constraint firstItem="XMS-3V-fh8" firstAttribute="width" secondItem="Bli-Vl-6pY" secondAttribute="width" id="K5o-Tb-BMr"/>
+                                <constraint firstItem="XMS-3V-fh8" firstAttribute="leading" secondItem="Bli-Vl-6pY" secondAttribute="trailing" constant="8" id="K7R-RN-PiD"/>
+                                <constraint firstAttribute="trailing" secondItem="XMS-3V-fh8" secondAttribute="trailing" constant="8" id="Sgq-sr-Qac"/>
+                                <constraint firstItem="XMS-3V-fh8" firstAttribute="centerY" secondItem="hfy-I8-XfZ" secondAttribute="centerY" id="grF-pU-kd9"/>
+                                <constraint firstItem="Bli-Vl-6pY" firstAttribute="centerY" secondItem="hfy-I8-XfZ" secondAttribute="centerY" id="ihj-et-8U3"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UITableViewCell" textLabel="4NM-pr-lux" detailTextLabel="vgE-q5-C7y" style="IBUITableViewCellStyleValue1" id="X4D-Is-wMw">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="X4D-Is-wMw" id="Fcl-0Z-U4h">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>

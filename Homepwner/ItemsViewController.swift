@@ -14,6 +14,18 @@ class ItemsViewController: UITableViewController {
     
     var itemStore: ItemStore!
     
+    //MARK: - APP LIFE CYCLE 
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let statusBarHeight = UIApplication.shared.statusBarFrame.height
+        let insets = UIEdgeInsets(top: statusBarHeight, left: 0, bottom: 0, right: 0)
+        tableView.contentInset = insets
+        tableView.scrollIndicatorInsets = insets
+        
+    }
+    
     //MARK: - TABLE VIEW DELEGATE METHODS
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -29,5 +41,25 @@ class ItemsViewController: UITableViewController {
         cell.detailTextLabel?.text = "$\(item.valueInDollars)"
         
         return cell
+    }
+    
+    //MARK: - @IBACTIONS 
+    
+    @IBAction func addNewItem(_ sender: UIButton) {
+        
+        
+    }
+    
+    @IBAction func toggleEditingMode(_ sender: UIButton) {
+        
+        if isEditing {
+            
+            sender.setTitle("Edit", for: .normal)
+            setEditing(false, animated: true)
+        } else {
+            
+            sender.setTitle("Done", for: .normal)
+            setEditing(true, animated: true)
+        }
     }
 }
