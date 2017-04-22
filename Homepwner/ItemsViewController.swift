@@ -29,6 +29,12 @@ class ItemsViewController: UITableViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        tableView.reloadData()
+    }
+    
     //MARK: - TABLE VIEW DELEGATE METHODS
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -73,6 +79,24 @@ class ItemsViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         
         itemStore.moveItem(from: sourceIndexPath.row, to: destinationIndexPath.row)
+    }
+    
+    //MARK: - NAVIGATION 
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    
+        switch segue.identifier {
+        case "showItem"?:
+            if let row = tableView.indexPathForSelectedRow?.row {
+                
+                let item = itemStore.allItems[row]
+                let detailViewController = segue.destination as! DetailViewController
+                detailViewController.item = item
+            }
+        default:
+            preconditionFailure("Unexpected segue identifier")
+        }
+        
     }
     
     //MARK: - @IBACTIONS 

@@ -17,6 +17,7 @@
 		FC3AB0DC1EA9100000BFEDC0 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3AB0DB1EA9100000BFEDC0 /* Item.swift */; };
 		FC3AB0DE1EA9125300BFEDC0 /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3AB0DD1EA9125300BFEDC0 /* ItemStore.swift */; };
 		FC3AB0E01EA935E800BFEDC0 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3AB0DF1EA935E800BFEDC0 /* ItemCell.swift */; };
+		FC3AB0E21EAB389400BFEDC0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3AB0E11EAB389400BFEDC0 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		FC3AB0DB1EA9100000BFEDC0 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		FC3AB0DD1EA9125300BFEDC0 /* ItemStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
 		FC3AB0DF1EA935E800BFEDC0 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		FC3AB0E11EAB389400BFEDC0 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				FC3AB0D51EA815BE00BFEDC0 /* ItemsViewController.swift */,
+				FC3AB0E11EAB389400BFEDC0 /* DetailViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				FC3AB0D61EA815BE00BFEDC0 /* ItemsViewController.swift in Sources */,
 				FC3AB0DC1EA9100000BFEDC0 /* Item.swift in Sources */,
 				FC3AB0DE1EA9125300BFEDC0 /* ItemStore.swift in Sources */,
+				FC3AB0E21EAB389400BFEDC0 /* DetailViewController.swift in Sources */,
 				FC3AB0A81EA80E3200BFEDC0 /* AppDelegate.swift in Sources */,
 				FC3AB0E01EA935E800BFEDC0 /* ItemCell.swift in Sources */,
 			);
