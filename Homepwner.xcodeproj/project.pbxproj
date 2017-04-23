@@ -18,6 +18,7 @@
 		FC3AB0DE1EA9125300BFEDC0 /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3AB0DD1EA9125300BFEDC0 /* ItemStore.swift */; };
 		FC3AB0E01EA935E800BFEDC0 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3AB0DF1EA935E800BFEDC0 /* ItemCell.swift */; };
 		FC3AB0E21EAB389400BFEDC0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3AB0E11EAB389400BFEDC0 /* DetailViewController.swift */; };
+		FC3AB0E61EAD2C7300BFEDC0 /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3AB0E51EAD2C7300BFEDC0 /* ImageStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		FC3AB0DD1EA9125300BFEDC0 /* ItemStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
 		FC3AB0DF1EA935E800BFEDC0 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		FC3AB0E11EAB389400BFEDC0 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		FC3AB0E51EAD2C7300BFEDC0 /* ImageStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 			children = (
 				FC3AB0DB1EA9100000BFEDC0 /* Item.swift */,
 				FC3AB0DD1EA9125300BFEDC0 /* ItemStore.swift */,
+				FC3AB0E51EAD2C7300BFEDC0 /* ImageStore.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 				FC3AB0DE1EA9125300BFEDC0 /* ItemStore.swift in Sources */,
 				FC3AB0E21EAB389400BFEDC0 /* DetailViewController.swift in Sources */,
 				FC3AB0A81EA80E3200BFEDC0 /* AppDelegate.swift in Sources */,
+				FC3AB0E61EAD2C7300BFEDC0 /* ImageStore.swift in Sources */,
 				FC3AB0E01EA935E800BFEDC0 /* ItemCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

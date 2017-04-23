@@ -13,6 +13,7 @@ class ItemsViewController: UITableViewController {
     //MARK: - VARIABLES
     
     var itemStore: ItemStore!
+    var imageStore: ImageStore!
     
     //MARK: - APP LIFE CYCLE 
     
@@ -68,6 +69,7 @@ class ItemsViewController: UITableViewController {
             let deleteAction = UIAlertAction(title: "Delete", style: .destructive, handler: { (action) -> Void in
             
                 self.itemStore.removeItem(item)
+                self.imageStore.deleteImage(forKey: item.itemKey)
                 self.tableView.deleteRows(at: [indexPath], with: .automatic)
                 
             })
@@ -93,6 +95,7 @@ class ItemsViewController: UITableViewController {
                 let item = itemStore.allItems[row]
                 let detailViewController = segue.destination as! DetailViewController
                 detailViewController.item = item
+                detailViewController.imageStore = imageStore
             }
         default:
             preconditionFailure("Unexpected segue identifier")
