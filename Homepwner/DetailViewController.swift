@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, UITextFieldDelegate {
 
     //MARK: - @IBOUTLETS 
     
@@ -19,7 +19,12 @@ class DetailViewController: UIViewController {
     
     //MARK: - VARIABLES
     
-    var item: Item!
+    var item: Item! {
+        didSet {
+            
+            navigationItem.title = item.name
+        }
+    }
     
     let numberFormatter: NumberFormatter = {
         
@@ -52,6 +57,8 @@ class DetailViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
+        view.endEditing(true)
+        
         //Save changes to item
         
         item.name = nameField.text ?? ""
@@ -61,6 +68,20 @@ class DetailViewController: UIViewController {
             item.valueInDollars = value.intValue
         }
         
+    }
+    
+    //MARK: - TEXTFIELD DELEGATE METHODS
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    //MARK: - @IBACTIONS
+    
+    @IBAction func backgroundTapped(_ sender: Any) {
+        view.endEditing(true)
     }
     
 
